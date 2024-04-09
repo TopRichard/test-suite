@@ -45,13 +45,13 @@ if [ -z "${REFRAME_BRANCH}" ]; then
     REFRAME_BRANCH="v${REFRAME_VERSION}"
 fi
 if [ -z "${EESSI_TESTSUITE_URL}" ]; then
-    EESSI_TESTSUITE_URL='https://github.com/EESSI/test-suite.git'
+    EESSI_TESTSUITE_URL='https://github.com/TopRichard/test-suite.git'
 fi
 if [ -z "${EESSI_TESTSUITE_BRANCH}" ]; then
     EESSI_TESTSUITE_BRANCH='v0.2.0'
 fi
 if [ -z "${EESSI_CVMFS_REPO}" ]; then
-    export EESSI_CVMFS_REPO=/cvmfs/software.eessi.io
+    export EESSI_CVMFS_REPO=/cvmfs/pilot.nessi.no
 fi
 if [ -z "${EESSI_VERSION}" ]; then
     export EESSI_VERSION=2023.06
