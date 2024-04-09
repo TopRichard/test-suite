@@ -97,7 +97,7 @@ def common_eessi_init(eessi_version=None):
         err_msg = "Environment variable 'EESSI_CVMFS_REPO' was not found."
         err_msg += " Did you initialize the EESSI environment before running the test suite?"
         raise ValueError(err_msg)
-    if eessi_cvmfs_repo == '/cvmfs/pilot.eessi-hpc.org':
+    if eessi_cvmfs_repo == '/cvmfs/pilot.nessi.no':
         if eessi_version is None:
             # Try also EESSI_VERSION for backwards compatibility with previous common_eessi_init implementation
             eessi_version = os.getenv('EESSI_PILOT_VERSION', os.getenv('EESSI_VERSION', 'latest'))
@@ -112,7 +112,7 @@ def common_eessi_init(eessi_version=None):
             err_msg += " Did you initialize the EESSI environment before running the test suite?"
             raise ValueError(err_msg)
 
-    if eessi_cvmfs_repo == '/cvmfs/pilot.eessi-hpc.org' and eessi_version == 'latest':
-        return '/cvmfs/pilot.eessi-hpc.org/latest/init/bash'
+    if eessi_cvmfs_repo == '/cvmfs/pilot.nessi.no' and eessi_version == 'latest':
+        return '/cvmfs/pilot.nessi.no/latest/init/bash'
     else:
         return '%s/versions/%s/init/bash' % (eessi_cvmfs_repo, eessi_version)
