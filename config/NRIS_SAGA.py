@@ -26,14 +26,14 @@ reframe_prefix = os.path.join(os.environ['HOME'], 'reframe_runs')
 site_configuration = {
     'systems': [
         {
-            'name': '',
+            'name': 'SAGA',
             'descr': 'SAGA, a national HPC system',
             'modules_system': 'lmod',
             'hostnames': ['login*', 'acn*', 'cn*'],
             'prefix': reframe_prefix,
             'partitions': [
                 {
-                    'name': 'normal',
+                    'name': 'normal*',
                     'scheduler': 'slurm',
                     'prepare_cmds': [
                         'source %s' % common_eessi_init(),
