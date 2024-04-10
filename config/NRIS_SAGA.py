@@ -33,7 +33,7 @@ site_configuration = {
             'prefix': reframe_prefix,
             'partitions': [
                 {
-                    'name': 'normal*',
+                    'name': 'cpu_partition',
                     'scheduler': 'slurm',
                     'prepare_cmds': [
                         'source %s' % common_eessi_init(),
@@ -47,7 +47,7 @@ site_configuration = {
                     ],
                     'launcher': 'mpirun',
                     # Use --export=None to avoid that login environment is passed down to submitted jobs
-                    'access': ['-p qcpu', '-A DD-23-96', '--export=None'],
+                    'access': ['-p normal*', '-A nn9992k', '--export=None'],
                     'environs': ['default'],
                     'max_jobs': 120,
                     'features': [
