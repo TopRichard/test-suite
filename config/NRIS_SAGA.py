@@ -45,7 +45,7 @@ site_configuration = {
                         # Can be taken out once we don't care about old OpenMPI versions anymore (pre-4.1.1)
                         'export OMPI_MCA_pml=ucx',
                     ],
-                    'launcher': 'mpirun',
+                    'launcher': 'srun',
                     # Use --export=None to avoid that login environment is passed down to submitted jobs
                     'access': ['-p normal', '-A nn9992k', '-mem 16', '--export=None'],
                     'environs': ['default'],
@@ -107,7 +107,7 @@ site_configuration = {
         {
             # Enable automatic detection of CPU architecture for each partition
             # See https://reframe-hpc.readthedocs.io/en/stable/configure.html#auto-detecting-processor-information
-            'remote_detect': False,
+            'remote_detect': True,
             **common_general_config(reframe_prefix)
         }
     ],
