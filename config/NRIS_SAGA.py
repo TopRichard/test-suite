@@ -26,7 +26,7 @@ reframe_prefix = os.path.join(os.environ['HOME'], 'reframe_runs')
 site_configuration = {
     'systems': [
         {
-            'name': 'SAGA',
+            'name': '',
             'descr': 'SAGA, a national HPC system',
             'modules_system': 'lmod',
             'hostnames': ['login*', 'acn*', 'cn*'],
