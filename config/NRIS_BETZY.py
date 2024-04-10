@@ -47,7 +47,7 @@ site_configuration = {
                     ],
                     'launcher': 'srun',
                     # Use --export=None to avoid that login environment is passed down to submitted jobs
-                    'access': ['-p normal', '-A nn9992k', '--time 30', '--nodes 4', '--export=None'],
+                    'access': ['-p normal', '-A nn9992k', '--time 30', '--nodes 4', '--ntasks 4'],
                     'environs': ['default'],
                     'max_jobs': 120,
                     'features': [
