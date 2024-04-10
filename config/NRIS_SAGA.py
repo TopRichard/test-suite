@@ -33,7 +33,7 @@ site_configuration = {
             'prefix': reframe_prefix,
             'partitions': [
                 {
-                    'name': 'qcpu',
+                    'name': 'normal',
                     'scheduler': 'slurm',
                     'prepare_cmds': [
                         'source %s' % common_eessi_init(),
