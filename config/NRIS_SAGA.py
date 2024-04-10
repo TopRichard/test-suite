@@ -47,7 +47,7 @@ site_configuration = {
                     ],
                     'launcher': 'mpirun',
                     # Use --export=None to avoid that login environment is passed down to submitted jobs
-                    'access': ['-p normal', '-A nn9992k', -mem='16', '--export=None'],
+                    'access': ['-p normal', '-A nn9992k', -mem '16', '--export=None'],
                     'environs': ['default'],
                     'max_jobs': 120,
                     'features': [
